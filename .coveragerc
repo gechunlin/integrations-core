@@ -1,0 +1,23 @@
+[run]
+branch = True
+
+omit =
+    */test_bench.py
+
+disable_warnings =
+    module-not-measured
+
+[report]
+show_missing = True
+ignore_errors = True
+
+exclude_lines =
+    no cov
+    no qa
+
+    # Ignore missing debug-only code
+    def __repr__
+    if self\.debug
+
+    # Ignore non-runnable code
+    if __name__ == .__main__.:
